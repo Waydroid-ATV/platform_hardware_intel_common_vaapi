@@ -60,7 +60,12 @@ $(GEN): $(LOCAL_PATH)/intel_version.h.in $(wildcard $(LOCAL_PATH)/../.git/logs/H
 	sed -e "s|\@INTEL_DRIVER_GIT_VERSION\@|$$VER|" $< > $@
 LOCAL_GENERATED_SOURCES += $(GEN)
 
-LOCAL_CFLAGS := -DLINUX -g -Wall -Wno-unused -fvisibility=hidden
+LOCAL_CFLAGS := -DLINUX -g -Wall -Wno-unused -fvisibility=hidden \
+        -Wno-missing-field-initializers \
+        -Wno-unused-parameter \
+        -Wno-sign-compare \
+        -Wno-pointer-arith \
+        -Wno-sometimes-uninitialized
 
 LOCAL_SHARED_LIBRARIES := libdl libdrm libdrm_intel libcutils \
                libva libva-android libstdc++
