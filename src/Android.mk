@@ -30,7 +30,7 @@ include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := $(source_c)
 
-LOCAL_MODULE := i965_drv_video
+LOCAL_MODULE := crocus_drv_video
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_RELATIVE_PATH := dri
