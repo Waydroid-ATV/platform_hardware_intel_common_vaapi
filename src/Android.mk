@@ -67,6 +67,7 @@ LOCAL_CFLAGS := -DLINUX -g -Wall -Wno-unused -fvisibility=hidden \
 
 LOCAL_SHARED_LIBRARIES := libdl libdrm libdrm_intel libcutils \
                libva libva-android
+LOCAL_HEADER_LIBRARIES := libva_headers
 
 ifeq ($(strip $(DRIVER_LOG_ENABLE)),true)
 LOCAL_CFLAGS += -DDRIVER_LOG_ENABLE
